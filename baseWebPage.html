@@ -13,25 +13,27 @@
 </head>
 
 <website_title>SD Hacks Project 2017</website_title>
-<div class="row" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
-  <ul ng-repeat="dropdown in dropdowns">
-    <clickme class="dropdown-toggle" ng-click="updateDropDown()">{{dropdown.name}}</clickme>
-    <li class="dropdown-menu" hidden="true">{{dropdown.value}}</li>
-  </ul>
-</div>
-
-<div class="row" style="margin-left: 45%" ng-controller="mainPageController">
-  <i class="fa fa-caret-square-o-down" style="" aria-hidden="true" data-toggle="collapse" data-target="#styleTab"></i>
-  <div ng-controller="styleController" id="styleTab" class="collapse">
-    <select id="styleValue">
-      <option ng-repeat="style in styles">{{style.name}}</option>
-    </select>
+<div class="row">
+  <div class="col-md-3" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
+    <ul ng-repeat="dropdown in dropdowns">
+      <clickme class="dropdown-toggle" ng-click="updateDropDown()">{{dropdown.name}}</clickme>
+      <li class="dropdown-menu" ng-model="$scope.dropdown.value" hidden="true" id="dropdown.name ">{{dropdown.value}}</li>
+    </ul>
   </div>
 
-  <div class="row" style="" ng-controller="shirtController">
-    <i class="fa fa-arrow-left fa-3 col-md-1" aria-hidden="true"></i>
+  <div class="col-md-6" style="margin-left: 20%; margin-top: 2%" ng-controller="mainPageController">
+    <i class="fa fa-caret-square-o-down" style="" aria-hidden="true" data-toggle="collapse" data-target="#styleTab"></i>
+    <div ng-controller="styleController" id="styleTab" class="collapse">
+      <select id="styleValue">
+        <option ng-repeat="style in styles">{{style.name}}</option>
+      </select>
+    </div>
 
-    <i class="fa fa-arrow-right fa-3 col-md-1" aria-hidden="true"></i>
+    <div class="row" style="" ng-controller="shirtController">
+      <i class="fa fa-arrow-left fa-3 col-md-1" aria-hidden="true"></i>
+
+      <i class="fa fa-arrow-right fa-3 col-md-1" aria-hidden="true"></i>
+    </div>
   </div>
 </div>
 
