@@ -1,5 +1,3 @@
-var baseWebPageApp = angular.module('baseWebPageApp', []);
-
 baseWebPageApp.controller('styleController', function styleController($scope) {
   $scope.styles = [
     {

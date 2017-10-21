@@ -1,14 +1,15 @@
 <html ng-app="baseWebPageApp">
 <head>
   <script src="angular.min.js"></script>
-  <script src="styleController.js"></script>
-  <script src="sidebarController.js"></script>
   <link rel="stylesheet" type="text/css" href="design_classes.css">
+  <script src="sidebarController.js"></script>
+  <script src="styleController.js"></script>
+  <script src="shirtController.js"></script>
 </head>
 
 <div ng-controller="sidebarController" id="sideBar">
   <ul ng-repeat="dropdown in dropdowns">
-    {{dropdown.name}}
+    <clickme>{{dropdown.name}}</clickme>
     <li hidden="true" id={{dropdown.name + Value}}>{{dropdown.value}}</li>
   </ul>
 </div>
@@ -18,6 +19,9 @@
     <select>
       <option ng-repeat="style in styles">{{style.name}}</option>
     </select>
+  </div>
+
+  <div ng-controller="shirtController">
   </div>
 </div>
 
