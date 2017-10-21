@@ -1,15 +1,19 @@
 <html ng-app="baseWebPageApp">
 <head>
   <script src="angular.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script src="styleDropDownController.js"></script>
+  <script src="sidebarController.js"></script>
+  <link rel="stylesheet" type="text/css" href="design_classes.css">
 </head>
-<div ng-controller="styleDropDownController" id="styleDropdown">
-  <select>
-    <option ng-repeat="style in styles">
-      <span>{{style.name}}</span>
-    </option>
-  </select>
+
+<div ng-controller="sidebarController" id="sideBar">
+  <ul ng-repeat="dropdown in dropdowns">
+    {{dropdown.name}}
+    <li hidden="true" id={{dropdown.name + Value}}>{{dropdown.value}}</li>
+  </ul>
+</div>
+
+<div>
+
 </div>
 </html>
