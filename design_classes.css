@@ -25,27 +25,27 @@ ul {
     overflow: auto;
 }
 
-li {
+ul {
 	border-bottom: 1px solid #bbb;
 }
 
-li: last-child {
+ul: last-child {
 	border-bottom: none;
 }
 
-li clickme {
+ul clickme {
     display: block;
     color: white;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-li clickme.active {
+ul clickme.active {
     background-color: #333;
     color: white;
 }
 
-li clickme:hover:not(.active) {
+ul clickme:hover:not(.active) {
     background-color: #555;
     color: white;
 }
