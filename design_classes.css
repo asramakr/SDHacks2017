@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+website_title {
+    color: darkblue;
+    text-align: center;
+    font-family: bookman;
+    font-size: 50px;
+}
+
+h1 {
+    color: black;
+    font-family: verdana;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    background-color: #555;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li {
+	border-bottom: 1px solid #bbb;
+}
+
+li: last-child {
+	border-bottom: none;
+}
+
+li clickme {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li clickme.active {
+    background-color: #333;
+    color: white;
+}
+
+li clickme:hover:not(.active) {
+    background-color: #333;
+    color: white;
+}
