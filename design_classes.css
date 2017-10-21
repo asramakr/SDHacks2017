@@ -40,12 +40,12 @@ ul clickme {
     text-decoration: none;
 }
 
-ul clickme:hover {
+clickme:hover {
     background-color: #333;
     color: white;
 }
 
-ul clickme:hover:not(.active) {
+clickme:hover:not(.active) {
     background-color: #555;
     color: white;
 }
