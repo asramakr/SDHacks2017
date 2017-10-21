@@ -1,7 +1,7 @@
 <html ng-app="baseWebPageApp">
 <head>
   <script src="angular.min.js"></script>
-  <script src="styleDropDownController.js"></script>
+  <script src="styleController.js"></script>
   <script src="sidebarController.js"></script>
   <link rel="stylesheet" type="text/css" href="design_classes.css">
 </head>
@@ -14,6 +14,11 @@
 </div>
 
 <div>
-
+  <div ng-controller="styleController">
+    <select>
+      <option ng-repeat="style in styles">{{style.name}}</option>
+    </select>
+  </div>
 </div>
+
 </html>
