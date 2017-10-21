@@ -13,4 +13,9 @@ baseWebPageApp.controller('sidebarController', function sidebarController($scope
       value: ''
     }
   ];
+
+  $scope.updateDropDown = function(){
+    var myStyle = document.getElementById("styleValue");
+    $scope.dropdowns[0].value = myStyle.innerHTML;
+  }
 });
