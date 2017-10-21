@@ -12,20 +12,20 @@
   <script src="Controllers/mainPageController.js"></script>
 </head>
 
-<div class="row" ng-controller="sidebarController" id="sideBar">
+<div class="row" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
   <ul ng-repeat="dropdown in dropdowns">
     <clickme>{{dropdown.name}}</clickme>
     <li hidden="true" id={{dropdown.name + Value}}>{{dropdown.value}}</li>
   </ul>
 </div>
 
-<div class="row" ng-controller="mainPageController">
-  <div ng-controller="styleController" id="styleTab" class="col-md-10 collapse">
+<div class="row" style="padding-left: 20px" ng-controller="mainPageController">
+  <i class="fa fa-caret-square-o-down" style="padding-left: 20px" aria-hidden="true" data-toggle="collapse" data-target="#styleTab"></i>
+  <div ng-controller="styleController" id="styleTab" class="collapse">
     <select>
       <option ng-repeat="style in styles">{{style.name}}</option>
     </select>
   </div>
-  <button data-toggle="collapse" data-target="#styleTab" class="col-md-2">Click This</button>
 
   <div ng-controller="shirtController">
   </div>
