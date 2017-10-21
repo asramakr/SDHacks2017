@@ -23,10 +23,8 @@ ul {
     width: 150px;
     background-color: #555;
     overflow: auto;
-}
-
-ul {
-	border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    margin-bottom: 0;
 }
 
 ul: last-child {
@@ -34,6 +32,7 @@ ul: last-child {
 }
 
 ul clickme {
+    margin-bottom: 0;
     display: block;
     color: white;
     padding: 8px 16px;
