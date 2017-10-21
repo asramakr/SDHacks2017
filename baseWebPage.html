@@ -2,19 +2,22 @@
 <head>
   <script src="angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="design_classes.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="sidebarController.js"></script>
   <script src="styleController.js"></script>
   <script src="shirtController.js"></script>
 </head>
 
-<div ng-controller="sidebarController" id="sideBar">
+<div class="col-md-4" ng-controller="sidebarController" id="sideBar">
   <ul ng-repeat="dropdown in dropdowns">
     <clickme>{{dropdown.name}}</clickme>
     <li hidden="true" id={{dropdown.name + Value}}>{{dropdown.value}}</li>
   </ul>
 </div>
 
-<div>
+<div class="col-md-12">
   <div ng-controller="styleController">
     <select>
       <option ng-repeat="style in styles">{{style.name}}</option>
