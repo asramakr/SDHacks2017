@@ -16,19 +16,18 @@
 <div class="row">
   <div class="col-md-3" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
     <ul ng-repeat="dropdown in dropdowns">
-      <clickme class="dropdown-toggle" ng-click="">{{dropdown.name}}</clickme>
+      <clickme style="width: 150px; text-align:left;" href="#styleTab" class="btn btn-link dropdown-toggle" ng-click="">{{dropdown.name}}</clickme>
       <li class="dropdown-menu">{{dropdown.value}}</li>
     </ul>
   </div>
 
-  <div class="col-md-6" style="margin-left: 20%; margin-top: 2%" ng-controller="mainPageController">
-    <i class="fa fa-caret-square-o-down" style="" aria-hidden="true" data-toggle="collapse" data-target="#styleTab"></i>
-    <div ng-controller="styleController" id="styleTab" class="collapse">
+  <div class="col-md-6" style="margin-left: 0; margin-top: 2%" ng-controller="mainPageController">
+    <div ng-controller="styleController" id="styleTab">
       <div class="container">
         <h2>Choose a Style:</h2>
         <div class="row">
           <div class="col-md-4">
-            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1'>Casual</button>
+            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1' style="margin-left: 45%;">Casual</button>
             <div class="thumbnail">
               <a href="https://i.styleoholic.com/2016/02/trendy-spring-2016-casual-outfits-for-men-21.jpg" target="_blank">
                 <img src="https://i.styleoholic.com/2016/02/trendy-spring-2016-casual-outfits-for-men-21.jpg" alt="Lights" style="width:100%">
@@ -36,7 +35,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1'>Formal</button>
+            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1' style="margin-left: 45%">Formal</button>
             <div class="thumbnail">
               <a href="http://i.ebayimg.com/00/s/ODQ5WDU2Ng==/z/0tcAAOSwEK9UGYew/$_32.JPG?set_id=880000500F" target="_blank">
                 <img src="http://i.ebayimg.com/00/s/ODQ5WDU2Ng==/z/0tcAAOSwEK9UGYew/$_32.JPG?set_id=880000500F" alt="Nature" style="width:100%">
