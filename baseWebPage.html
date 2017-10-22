@@ -1,6 +1,7 @@
 <html ng-app="baseWebPageApp">
 <head>
   <script src="angularjs/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -9,50 +10,22 @@
   <script src="Controllers/styleController.js"></script>
   <script src="Controllers/shirtController.js"></script>
   <script src="Controllers/mainPageController.js"></script>
+  <script src="service.js"></script>
   <link rel="stylesheet" type="text/css" href="design_classes.css">
 </head>
 
 <website_title>SD Hacks Project 2017</website_title>
 <div class="row">
   <div class="col-md-3" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
-    <ul ng-repeat="dropdown in dropdowns">
-      <clickme style="width: 150px; text-align:left;" href="#styleTab" class="btn btn-link dropdown-toggle" ng-click="">{{dropdown.name}}</clickme>
-      <li class="dropdown-menu">{{dropdown.value}}</li>
+    <ul>
+      <li><a href="/">Styles</a></li>
+      <li><a href="/shirts">Shirts</a></li>
+      <li><a href="">Pants</a></li>
     </ul>
   </div>
 
   <div class="col-md-6" style="margin-left: 0; margin-top: 2%" ng-controller="mainPageController">
-    <div ng-controller="styleController" id="styleTab">
-      <div class="container">
-        <h2>Choose a Style:</h2>
-        <div class="row">
-          <div class="col-md-4">
-
-            <div class="thumbnail">
-              <a href="https://i.styleoholic.com/2016/02/trendy-spring-2016-casual-outfits-for-men-21.jpg" target="_blank">
-                <img src="https://i.styleoholic.com/2016/02/trendy-spring-2016-casual-outfits-for-men-21.jpg" alt="Lights" style="width:100%">
-              </a>
-            </div>
-            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1' style="margin-left: 40%; margin-bottom: 10px;">Casual</button>
-          </div>
-          <div class="col-md-4">
-
-            <div class="thumbnail">
-              <a href="http://i.ebayimg.com/00/s/ODQ5WDU2Ng==/z/0tcAAOSwEK9UGYew/$_32.JPG?set_id=880000500F" target="_blank">
-                <img src="http://i.ebayimg.com/00/s/ODQ5WDU2Ng==/z/0tcAAOSwEK9UGYew/$_32.JPG?set_id=880000500F" alt="Nature" style="width:100%">
-              </a>
-            </div>
-            <button type="button" class="btn btn-primary" data-toggle="dropdown" onclick='flag_casual=1' style="margin-left: 40%; margin-bottom: 10px;">Formal</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="" ng-controller="shirtController">
-      <i class="fa fa-arrow-left fa-3 col-md-1" aria-hidden="true"></i>
-
-      <i class="fa fa-arrow-right fa-3 col-md-1" aria-hidden="true"></i>
-    </div>
+    <div ng-view></div>
   </div>
 </div>
 
