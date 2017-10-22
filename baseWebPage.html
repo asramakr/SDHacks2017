@@ -16,8 +16,8 @@
 <div class="row">
   <div class="col-md-3" style="padding-left: 20px" ng-controller="sidebarController" id="sideBar">
     <ul ng-repeat="dropdown in dropdowns">
-      <clickme class="dropdown-toggle" ng-click="updateDropDown()">{{dropdown.name}}</clickme>
-      <li class="dropdown-menu" ng-model="$scope.dropdown.value" hidden="true" id="dropdown.name ">{{dropdown.value}}</li>
+      <clickme class="dropdown-toggle" ng-click="">{{dropdown.name}}</clickme>
+      <li class="dropdown-menu">{{dropdown.value}}</li>
     </ul>
   </div>
 

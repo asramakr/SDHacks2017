@@ -4,18 +4,20 @@ baseWebPageApp.controller('sidebarController', function sidebarController($scope
   $scope.dropdowns = [
     {
       name: 'Style',
-      value: ''
+      value: 'Casual'
     }, {
       name: 'Shirt',
-      value: ''
+      value: 'T-Shirt'
     }, {
       name: 'Pants',
-      value: ''
+      value: 'Jeans'
     }
   ];
 
-  $scope.updateDropDown = function(){
-    var myStyle = document.getElementById("styleValue");
-    $scope.dropdowns[0].value = myStyle.innerHTML;
-  }
+  // $scope.updateDropDown = function(){
+  //   var myStyle = document.getElementById("styleValue");
+  //   var styleDropdown = document.getElementById("StyleDropdown");
+  //   styleDropdown.innerHTML = myStyle.innerHTML;
+  //   styleDropdown.setAttribute("hidden", "false");
+  // }
 });
