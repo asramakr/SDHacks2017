@@ -2,14 +2,14 @@ baseWebPageApp.config(function($routeProvider) {
   $routeProvider
   .when("/", {
     templateUrl : "stylePage.html"
-    controller: "styleController.js"
+    controller: "Controllers/styleController.js"
   })
   .when("/shirt", {
     templateUrl : "shirtPage.html"
-    controller: "shirtController.js"
+    controller: "Controllers/shirtController.js"
   })
   .when("/pants", {
     templateUrl : "pantPage.html"
-    controller: "pantController.js"
+    controller: "Controllers/pantController.js"
   });
 });
